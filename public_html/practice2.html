@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice2</title>
+</head>
+<body>
+    <style>
+        #paragraph {
+            border-style: solid;
+            border-width: 5px;
+        }
+    </style>
+    <h1>Lab 7 Practice 2</h1>
+    <p id="paragraph">The boy walked down the street</p>
+    <script>
+        function alert_paragraph_color(){
+            var border_R = document.getElementById("border_R").value;
+            var border_G = document.getElementById("border_G").value;
+            var border_B = document.getElementById("border_B").value;
+            var border_width = document.getElementById("border_width").value;
+            var background_R = document.getElementById("bg_R").value;
+            var background_G = document.getElementById("bg_G").value;
+            var background_B = document.getElementById("bg_B").value;
+            var tag = document.getElementById("paragraph");
+
+            tag.style.borderColor = `rgb(${border_R},${border_G},${border_B})`;
+            tag.style.borderWidth = border_width;
+            tag.style.backgroundColor = `rgb(${background_R},${background_G},${background_B})`;
+            
+
+
+        }
+    </script>
+    <label>Border R &#40;0-255&#41;:</label>
+    <input type="text" id="border_R" value=""><br>
+    <label>Border G &#40;0-255&#41;:</label>
+    <input type="text" id="border_G" value=""><br>
+    <label>Border B &#40;0-255&#41;:</label>
+    <input type="text" id="border_B" value=""><br>
+    <label>Border Width:</label>
+    <input type="text" id="border_width" value=""><br>
+    <label>Background R &#40;0-255&#41;:</label>
+    <input type="text" id="background_R" value=""><br>
+    <label>Background G &#40;0-255&#41;:</label>
+    <input type="text" id="background_G" value=""><br>
+    <label>Background B &#40;0-255&#41;:</label>
+    <input type="text" id="background_B" value=""><br>
+    <button onclick="alert_paragraph_color()">Change the color!</button>
+
+</body>
+</html>

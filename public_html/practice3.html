@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice3</title>
+</head>
+<body>
+    <h1>Lab 7 Practice3</h1>
+    <label>First Password:</label>
+    <input type="text" id="first" value=""><br>
+    <label>Second Password:</label>
+    <input type="text" id="second" value=""><br>
+    <button onclick="validation()">Validate Your Password</button>
+    <script>
+        function validation(){
+            var first = document.getElementById("first").value;
+            var second = document.getElementById("second").value;
+
+            if (first.length < 8) {
+                alert("The length of the first password is less that 8 letters")
+            } else if (second.length < 8) {
+                alert("The length of the second password is less than 8 letters")
+            } else if (first != second) {
+                alert("The passwords do not match")
+            } else {
+                alert("Everything looks good!")
+            }
+        }
+    </script>
+</body>
+</html>

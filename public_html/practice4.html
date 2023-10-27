@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>practice4</title>
+</head>
+<body>
+    <h2>LAb 7 practice 4</h2>
+    <form method="post">
+        Enter a number: <input type="number" name="number">
+        <input type="submit" value="Generate Table">
+    </form>
+    <br>
+
+    <?php
+    if (isset($_POST['number'])) {
+        $number = (int)$_POST['number'];
+
+        if ($number > 0) {
+            echo "<h3>Multiplication Table for 1 to $number:</h3>";
+            echo "<table border='1'>";
+            echo "<tr><th>*</th>";
+
+            for ($i = 1; $i <= $number; $i++) {
+                echo "<th>$i</th>";
+            }
+
+            echo "</tr>";
+
+            for ($i = 1; $i <= $number; $i++) {
+                echo "<tr><th>$i</th>";
+
+                for ($j = 1; $j <= $number; $j++) {
+                    echo "<td>" . ($i * $j) . "</td>";
+                }
+
+                echo "</tr>";
+            }
+
+            echo "</table>";
+        } else {
+            echo "Please enter a positive number.";
+        }
+    }
+    ?>
+</body>
+</html>
